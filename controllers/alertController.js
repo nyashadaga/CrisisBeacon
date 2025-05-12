@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { Pool } = require('pg'); // Import Pool directly from pg
+const { Pool } = require('pg'); 
 const { Connector } = require('@google-cloud/cloud-sql-connector'); // Import Connector directly
 
 let pool; // Declare pool outside functions
@@ -12,6 +12,7 @@ async function createPoolAndConnector() {
     instanceConnectionName: process.env.DB_INSTANCE_CONNECTION_NAME,
     ipTypes: ['PUBLIC'],
   });
+  
   pool = new Pool({
     ...clientOpts,
     host: process.env.DB_HOST,
