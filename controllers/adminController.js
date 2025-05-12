@@ -24,6 +24,7 @@ async function createPoolAndConnector() {
   });
 }
 
+
 createPoolAndConnector(); // Call initialization function
 
 const adminLogin = async (req, res) => {
